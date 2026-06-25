@@ -360,22 +360,27 @@ ul { list-style: none; }
   height: 1px;
   background: rgba(116,185,230,0.75);
 }
-.sp-only { display: none; }
 .hero-title-main {
-  display: block;
-  font-size: clamp(2rem, 4.6vw, 3.6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: clamp(2rem, 4.4vw, 3.5rem);
   font-weight: 900;
-  line-height: 1.22;
-  max-width: 720px;
+  line-height: 1.12;
   letter-spacing: 0.045em;
   text-shadow: 0 8px 30px rgba(0,0,0,0.38);
+  max-width: 720px;
 }
-.hero-title-main em {
-  font-style: normal;
+.hero-line {
+  display: block;
+  white-space: nowrap;
+}
+.hero-line-em {
   color: #EAF4FA;
   position: relative;
 }
-.hero-title-main em::after {
+.hero-line-em::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1055,8 +1060,8 @@ ul { list-style: none; }
   .hero-title-designed { gap: 12px; }
   .hero-title-label { font-size: 0.65rem; letter-spacing: 0.2em; }
   .hero-title-label::before { width: 32px; }
-  .sp-only { display: inline; }
-  .hero-title-main { font-size: clamp(2rem, 8.6vw, 2.9rem); line-height: 1.28; }
+  .hero-title-main { font-size: clamp(1.9rem, 8vw, 2.75rem); line-height: 1.18; gap: 5px; max-width: 100%; }
+  .hero-line { white-space: nowrap; }
   .hero-title-brand { font-size: 1.55rem; letter-spacing: 0.16em; }
 
   .float-cta { display: flex; }
@@ -1144,8 +1149,9 @@ ul { list-style: none; }
       <h1 class="hero-title hero-title-designed">
         <span class="hero-title-label">GARAGE SHUTTER WORKS</span>
         <span class="hero-title-main">
-          住まいの<br class="sp-only">シャッターを、<br>
-          <em>美しく、確実に。</em>
+          <span class="hero-line">住まいの</span>
+          <span class="hero-line">シャッターを、</span>
+          <span class="hero-line hero-line-em">美しく、確実に。</span>
         </span>
         <span class="hero-title-brand">NATS</span>
       </h1>
