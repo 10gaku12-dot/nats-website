@@ -360,11 +360,13 @@ ul { list-style: none; }
   height: 1px;
   background: rgba(116,185,230,0.75);
 }
+.sp-only { display: none; }
 .hero-title-main {
   display: block;
-  font-size: clamp(2.15rem, 5.2vw, 4.05rem);
+  font-size: clamp(2rem, 4.6vw, 3.6rem);
   font-weight: 900;
   line-height: 1.22;
+  max-width: 720px;
   letter-spacing: 0.045em;
   text-shadow: 0 8px 30px rgba(0,0,0,0.38);
 }
@@ -1053,7 +1055,8 @@ ul { list-style: none; }
   .hero-title-designed { gap: 12px; }
   .hero-title-label { font-size: 0.65rem; letter-spacing: 0.2em; }
   .hero-title-label::before { width: 32px; }
-  .hero-title-main { font-size: clamp(2rem, 9vw, 3rem); line-height: 1.28; }
+  .sp-only { display: inline; }
+  .hero-title-main { font-size: clamp(2rem, 8.6vw, 2.9rem); line-height: 1.28; }
   .hero-title-brand { font-size: 1.55rem; letter-spacing: 0.16em; }
 
   .float-cta { display: flex; }
@@ -1141,7 +1144,7 @@ ul { list-style: none; }
       <h1 class="hero-title hero-title-designed">
         <span class="hero-title-label">GARAGE SHUTTER WORKS</span>
         <span class="hero-title-main">
-          住まいのシャッターを、<br>
+          住まいの<br class="sp-only">シャッターを、<br>
           <em>美しく、確実に。</em>
         </span>
         <span class="hero-title-brand">NATS</span>
